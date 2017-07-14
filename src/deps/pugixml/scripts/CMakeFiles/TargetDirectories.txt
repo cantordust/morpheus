@@ -1,7 +1,0 @@
-/home/lu-tze/ext/archive/projects/code/active/morpheus/src/deps/pugixml/scripts/CMakeFiles/install/strip.dir
-/home/lu-tze/ext/archive/projects/code/active/morpheus/src/deps/pugixml/scripts/CMakeFiles/install/local.dir
-/home/lu-tze/ext/archive/projects/code/active/morpheus/src/deps/pugixml/scripts/CMakeFiles/pugixml.dir
-/home/lu-tze/ext/archive/projects/code/active/morpheus/src/deps/pugixml/scripts/CMakeFiles/install.dir
-/home/lu-tze/ext/archive/projects/code/active/morpheus/src/deps/pugixml/scripts/CMakeFiles/list_install_components.dir
-/home/lu-tze/ext/archive/projects/code/active/morpheus/src/deps/pugixml/scripts/CMakeFiles/edit_cache.dir
-/home/lu-tze/ext/archive/projects/code/active/morpheus/src/deps/pugixml/scripts/CMakeFiles/rebuild_cache.dir
