@@ -1,0 +1,1 @@
+cmd='cmake;/home/lu-tze/ext/archive/projects/code/active/morpheus/src/deps/pugixml/scripts'

@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Config</class>
+ <widget class="QDialog" name="Config">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>640</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>640</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Settings</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <property name="modal">
+   <bool>true</bool>
+  </property>
+  <widget class="QPushButton" name="btnOK">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>450</y>
+     <width>80</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>OK</string>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="lstConfigList">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>20</y>
+     <width>125</width>
+     <height>420</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="spacing">
+    <number>8</number>
+   </property>
+   <property name="sortingEnabled">
+    <bool>false</bool>
+   </property>
+   <item>
+    <property name="text">
+     <string>Files</string>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Morphology</string>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Semantics</string>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Program</string>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+   </item>
+  </widget>
+  <widget class="QStackedWidget" name="stackSettings">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>20</y>
+     <width>491</width>
+     <height>421</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="currentIndex">
+    <number>1</number>
+   </property>
+   <widget class="QWidget" name="pFile">
+    <widget class="QTabWidget" name="tw_pFile">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>490</width>
+       <height>420</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="pFile_tabOpen">
+      <attribute name="title">
+       <string>Open</string>
+      </attribute>
+      <widget class="QCheckBox" name="chkRememberLastOpenDir">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>269</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Remember the most recently open directory</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="pFile_tabSave">
+      <attribute name="title">
+       <string>Save</string>
+      </attribute>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="pMorphology">
+    <widget class="QTabWidget" name="tw_pMorphology">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>490</width>
+       <height>420</height>
+      </rect>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777208</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="pMorphology_tabPreprocessing">
+      <attribute name="title">
+       <string>Preprocessing</string>
+      </attribute>
+      <widget class="QWidget" name="layoutWidget_4">
+       <property name="geometry">
+        <rect>
+         <x>11</x>
+         <y>60</y>
+         <width>500</width>
+         <height>321</height>
+        </rect>
+       </property>
+       <layout class="QFormLayout" name="formLayout_6">
+        <property name="fieldGrowthPolicy">
+         <enum>QFormLayout::ExpandingFieldsGrow</enum>
+        </property>
+        <item row="2" column="1">
+         <widget class="QCheckBox" name="chkProcLowercase">
+          <property name="text">
+           <string>Lowercase everything</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QCheckBox" name="chkProcRemoveNonAlnum">
+          <property name="text">
+           <string>Remove all non-alphanumeric characters (Unicode-aware)</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QCheckBox" name="chkProcRemovePunct">
+          <property name="text">
+           <string>Remove all punctuation marks</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <widget class="QCheckBox" name="chkProcKeepApostrophes">
+          <property name="text">
+           <string>Keep apostrophes</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="1">
+         <widget class="QCheckBox" name="chkProcCollapseMultipleSpaces">
+          <property name="text">
+           <string>Collapse multiple spaces into a single space</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="1">
+         <widget class="QCheckBox" name="chkProcRemoveSpaces">
+          <property name="text">
+           <string>Remove all spaces</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>11</x>
+         <y>23</y>
+         <width>440</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <widget class="QLabel" name="lblMaxLines">
+          <property name="text">
+           <string>Number of lines to process (0 for all lines, max. 10000): </string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QSpinBox" name="sboxMaxLines">
+          <property name="maximum">
+           <number>10000</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="pMorphology_tabSegmentation">
+      <attribute name="title">
+       <string>Segmentation</string>
+      </attribute>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>241</width>
+         <height>121</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Segmentation method</string>
+       </property>
+       <widget class="QRadioButton" name="rdPSCount">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>210</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Predecessor and successor count</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="rdPSEntropy">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>60</y>
+          <width>220</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Predecessor and successor entropy</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="rdCharacterFrequencies">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>90</y>
+          <width>146</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Character fre&amp;quencies</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="pSemantics">
+    <widget class="QTabWidget" name="tw_pProcessing">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>490</width>
+       <height>420</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="pProcessing_tab1">
+      <attribute name="title">
+       <string>SENSE</string>
+      </attribute>
+      <widget class="QWidget" name="gridLayoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>220</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="0" column="0">
+         <widget class="QLabel" name="lblHiddenLayerSize">
+          <property name="text">
+           <string>Hidden layer size:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QSpinBox" name="sboxHiddenLayerSize">
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="minimum">
+           <number>10</number>
+          </property>
+          <property name="maximum">
+           <number>10000</number>
+          </property>
+          <property name="value">
+           <number>300</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="pProgram">
+    <widget class="QTabWidget" name="tw_pProgram">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>491</width>
+       <height>421</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="pProgram_tabSettings">
+      <attribute name="title">
+       <string>Settings</string>
+      </attribute>
+      <widget class="QCheckBox" name="chkConfirmOnExit">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>111</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Confirm on exit</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="chkConsoleOutput">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>50</y>
+         <width>121</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Console output</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
